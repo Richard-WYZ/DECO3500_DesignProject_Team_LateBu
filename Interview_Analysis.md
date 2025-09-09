@@ -1,5 +1,14 @@
 # Interview Analysis
 
+## Key Insights
+
+- **Food as a social gateway**: For newly arrived students, eating and co-cooking are low-pressure icebreakers that help build friendships fast (mentioned by Li, Wang, Y, Anna, Priya).
+- **Belonging > the dish itself**: Relaxed, inclusive atmospheres and shared preparation create stronger bonds than restaurant meals alone (BBQ, hotpot, dumpling/taco/sushi nights recur).
+- **Cultural sharing drives “try-new + healthier”**: When a friend demonstrates a recipe, students are far more willing to try unfamiliar or healthier ingredients (lentils/dal, quinoa, miso, rye bread, avocado).
+- **Living alone + decision fatigue**: Studio living and “what should I eat?” overwhelm lead to takeaway or repetitive simple meals (Li, Wang, Priya).
+- **Substitutes & price sensitivity**: Students struggle to find familiar ingredients or equivalent taste/texture locally (Anna, Kenji, Y); they want affordable, accessible substitutes.
+- **Event friction**: Students want to cook together but lack organization scaffolding (planning, splitting tasks/costs, timeboxing), so events happen inconsistently.
+
 ## Key Points
 
 - **Food as Social Connector**: Eating together helps break the ice, reduce loneliness, and build friendships (especially for international students).
