@@ -2,5 +2,6 @@
 Design projects for DECO3500
 
 ## Catalog (Weekly Updates)
-- [Week 3-4](Design_Proposal_Evaluation.md): Design Proposal Evaluation
+- [Design Proposal Evaluation](Design_Proposal_Evaluation.md): Design Proposal Evaluation
 - [Week 5-6](Refine_Proposal.md): Refine Proposal
+- [Interview Analysis](Interview_Analysis.md): Interview Analysis
