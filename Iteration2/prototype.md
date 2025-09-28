@@ -57,7 +57,7 @@
 - **Public Kitchen Reservation**: Users can complete reservations on the lobby or elevator screen with a single drag.
 - **Fun Human-Technology Interactions in Kitchen**: Interesting interaction modes between participants and technology in the kitchen (e.g., gesture recognition, sensor-triggered dynamic feedback) could be further developed.
 - **Expanded Health Feedback**: The AI assistant will provide personalized health suggestions in the future, not limited to scoring.
-- **Personalized Illustrations**: Provide personalized services based on user preferences.
+- **Personalized Illustrations**: Provide personalized services based on user preferences, like style and colour.
 
 ---
 
