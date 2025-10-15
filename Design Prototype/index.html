@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriMate</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-left">
+            <h1>Timetable</h1>
+            <div class="date">Today: 15/09 Mon</div>
+        </div>
+        <div class="top-right">
+            <h1 class="recipe-title">Recipe Board</h1>
+            <div class="search-bar">
+                <span>🍊</span>
+                <input type="text" placeholder="">
+            </div>
+            <button class="start-btn">Start event!</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="left-panel">
+            <div class="timetable-container">
+                <div class="time-header">
+                    <div></div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                    <div>Sun</div>
+                </div>
+                
+                <div class="time-rows">
+                    <div class="time-row">
+                        <div class="time-label">9 - 10</div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">10 - 11</div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell filled" data-dish="spicy-squid"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell filled" data-dish="tomato-eggs"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">11 - 12</div>
+                        <div class="time-cell public">Public Time</div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">12 - 13</div>
+                        <div class="time-cell filled" data-dish="spicy-chicken-1"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell filled" data-dish="spicy-chicken-2"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell filled" data-dish="pan-fried-flounder"></div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">13 - 14</div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell filled" data-dish="french-beef-stew"></div>
+                        <div class="time-cell"></div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">14 - 15</div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell filled" data-dish="fried-prawns"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell filled" data-dish="oceanian-1"></div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">15 - 16</div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">16 - 17</div>
+                        <div class="time-cell filled" data-dish="oceanian-2"></div>
+                        <div class="time-cell filled" data-dish="oceanian-3"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">17 - 18</div>
+                        <div class="time-cell public">Public Time</div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">18 - 19</div>
+                        <div class="time-cell filled" data-dish="oceanian-4"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell filled" data-dish="oceanian-5"></div>
+                        <div class="time-cell"></div>
+                    </div>
+
+                    <div class="time-row">
+                        <div class="time-label">19 - 20</div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell"></div>
+                        <div class="time-cell filled" data-dish="oceanian-6"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instruction">
+                👆 Drag the tag here to join
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="tabs">
+                <button class="tab active">Worldwide</button>
+                <button class="tab">Asian</button>
+                <button class="tab">European</button>
+                <button class="tab">Oceania</button>
+            </div>
+
+            <div class="content-area">
+                <div class="cuisine-section">
+                    <div class="section-header">
+                        <h2 class="cuisine-title">Asian Cuisine</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="recipe-grid">
+                        <div class="recipe-card" data-dish="spicy-squid">
+                            <img src="https://images.unsplash.com/photo-1633504581786-316c8002b1b9?w=400" alt="Spicy Squid" class="recipe-image">
+                            <div class="recipe-name">Spicy Squid</div>
+                        </div>
+                        <div class="recipe-card" data-dish="tomato-eggs">
+                            <img src="https://images.unsplash.com/photo-1595587870672-c79c4750e9be?w=400" alt="Tomato Eggs" class="recipe-image">
+                            <div class="recipe-name">Tomato Eggs</div>
+                        </div>
+                        <div class="recipe-card" data-dish="spicy-chicken-1">
+                            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400" alt="Spicy Chicken" class="recipe-image">
+                            <div class="recipe-name">Spicy Chicken</div>
+                        </div>
+                        <div class="recipe-card" data-dish="spicy-chicken-2">
+                            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400" alt="Spicy Chicken" class="recipe-image">
+                            <div class="recipe-name">Spicy Chicken</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cuisine-section">
+                    <div class="section-header">
+                        <h2 class="cuisine-title">European Cuisine</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="recipe-grid">
+                        <div class="recipe-card" data-dish="pan-fried-flounder">
+                            <img src="https://images.unsplash.com/photo-1580959375944-0f9d6c7d93b9?w=400" alt="Pan-fried flounder" class="recipe-image">
+                            <div class="recipe-name">Pan-fried flounder</div>
+                        </div>
+                        <div class="recipe-card" data-dish="french-beef-stew">
+                            <img src="https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?w=400" alt="French Beef Stew" class="recipe-image">
+                            <div class="recipe-name">French Beef Stew</div>
+                        </div>
+                        <div class="recipe-card" data-dish="fried-prawns">
+                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400" alt="Fried prawns" class="recipe-image">
+                            <div class="recipe-name">Fried prawns</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cuisine-section">
+                    <div class="section-header">
+                        <h2 class="cuisine-title">Oceanian Cuisine</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="recipe-grid">
+                        <div class="recipe-card" data-dish="oceanian-1">
+                            <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400" alt="Ocean Dish" class="recipe-image">
+                            <div class="recipe-name">Grilled Barramundi</div>
+                        </div>
+                        <div class="recipe-card" data-dish="oceanian-2">
+                            <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400" alt="Ocean Dish" class="recipe-image">
+                            <div class="recipe-name">Pavlova</div>
+                        </div>
+                        <div class="recipe-card" data-dish="oceanian-3">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400" alt="Ocean Dish" class="recipe-image">
+                            <div class="recipe-name">Lamington</div>
+                        </div>
+                        <div class="recipe-card" data-dish="oceanian-4">
+                            <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=400" alt="Ocean Dish" class="recipe-image">
+                            <div class="recipe-name">Meat Pie</div>
+                        </div>
+                        <div class="recipe-card" data-dish="oceanian-5">
+                            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400" alt="Ocean Dish" class="recipe-image">
+                            <div class="recipe-name">Fish & Chips</div>
+                        </div>
+                        <div class="recipe-card" data-dish="oceanian-6">
+                            <img src="https://images.unsplash.com/photo-1608835291093-ae6efc1d5e4f?w=400" alt="Ocean Dish" class="recipe-image">
+                            <div class="recipe-name">BBQ Prawns</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/homepage.js"></script>
+</body>
+</html>
