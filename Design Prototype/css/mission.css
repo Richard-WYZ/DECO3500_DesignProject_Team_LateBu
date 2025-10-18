@@ -1,0 +1,131 @@
+.mission-container {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    height: 100vh;
+    padding-top: 70px;
+    background: var(--cream);
+}
+
+/* 左侧任务栏 */
+.mission-sidebar {
+    background: var(--primary-brown);
+    color: white;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mission-title {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.mission-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mission-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.mission-item:hover {
+    transform: scale(1.05);
+}
+
+.circle {
+    width: 28px;
+    height: 28px;
+    border: 3px solid white;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.mission-item.completed .circle {
+    background: var(--accent-orange);
+    border-color: var(--accent-orange);
+}
+
+/* 右侧拼图 */
+.mission-content {
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+/* 进度条 */
+.mission-content {
+  position: relative;           /* 新增：用于放置右上角的进度条 */
+  align-items: center;
+  justify-content: flex-start;  /* 原来是 center，改为靠上 */
+  padding-top: 90px;            /* 给进度条留出空间 */
+}
+
+/* 右上角小进度条容器 */
+.progress-wrap {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 240px;                 /* 小尺寸 */
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 缩小进度条 */
+.progress-bar {
+  width: 100%;
+  height: 12px;                 /* 更薄 */
+  background: #e9e9e9;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+}
+
+/* 进度数值 */
+.progress-text {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+/* 拼图网格 */
+.puzzle-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, clamp(110px, 12vw, 160px));
+  grid-template-rows: repeat(3, clamp(110px, 12vw, 160px));
+  gap: 8px;
+}
+
+/* 即使图片加载不到，也能看到网格轮廓与占位底色 */
+.puzzle-piece {
+  background: url('../img/puzzle-grey.png') center/cover no-repeat, #eee;
+  border-radius: 10px;
+  border: 1px solid var(--gray-light);
+  filter: grayscale(100%) blur(1px);
+  transition: all 0.4s ease;
+}
+
+/* 激活后切换为彩色图；若图片缺失仍保留底色 */
+.puzzle-piece.active {
+  background: url('../img/puzzle-color.png') center/cover no-repeat, #eee;
+  filter: grayscale(0) blur(0);
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 2px rgba(255,154,86,0.25);
+}
