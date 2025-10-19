@@ -118,7 +118,7 @@
 /* 3×3 宫格 */
 .puzzle-grid {
   margin-top: 100px;
-  margin-right:250px;
+  margin-right:40px;
   display: grid;
   grid-template-columns: repeat(3, clamp(200px, 12vw, 400px));
   grid-template-rows: repeat(3, clamp(200px, 12vw, 400px));
@@ -185,7 +185,9 @@
 .right-section {
   display: flex;
   align-items: flex-start;
-  gap: 24px; 
+  justify-content: center;  /* 或 space-between，按你喜好 */
+  gap: 28px;                /* 三列之间的自然间距 */
+  flex-wrap: nowrap; 
 }
 
 /* 右侧区域横排：拼图 | 信息栏 | 头像列 */
@@ -198,13 +200,15 @@
 
 /* 信息栏卡片 */
 .info-panel {
-  width: 260px;              /* 你可以按需要改成 240~300 */
-  background: #fff7ef;       /* 奶油底色，贴合你的配色 */
+  width: 300px;             /* 你可调成 240~300 */
+  background: #fff7ef;
   border: 2px solid var(--accent-orange);
   border-radius: 16px;
   padding: 16px 18px;
   box-shadow: var(--shadow-light);
-  margin-top: 90px;          /* 与拼图顶部对齐 */
+  margin-top:100px;         /* 与拼图顶对齐（可微调） */
+  margin-left: 5px;
+  position: sticky;         /* 可选：滚动时固定在视口内 */
   top: 110px;
 }
 
@@ -241,7 +245,6 @@
 /* 备注 */
 .note {
   margin-top: 12px;
-  margin-right: 200px;
   font-size: 0.88rem;
   color: #825d4d;
   background: #fff2e5;
