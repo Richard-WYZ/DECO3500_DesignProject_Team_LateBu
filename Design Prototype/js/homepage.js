@@ -184,3 +184,113 @@ document.querySelectorAll('.time-cell').forEach(cell => {
         }
     });
 });
+
+// 标签页切换功能
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        // 移除所有标签的active状态
+        document.querySelectorAll('.tab').forEach(t => {
+            t.classList.remove('active');
+        });
+        
+        // 添加当前标签的active状态
+        this.classList.add('active');
+        
+        // 获取点击的标签文本
+        const tabName = this.textContent.trim();
+        
+        // 隐藏所有菜系区域
+        document.querySelectorAll('.cuisine-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // 显示对应的菜系
+        if (tabName === 'Worldwide') {
+            // 显示所有菜系
+            document.querySelectorAll('.cuisine-section').forEach(section => {
+                section.style.display = 'block';
+            });
+        } else if (tabName === 'Asian') {
+            // 只显示Asian Cuisine
+            const asianSection = Array.from(document.querySelectorAll('.cuisine-section')).find(
+                section => section.querySelector('.cuisine-title').textContent.includes('Asian')
+            );
+            if (asianSection) {
+                asianSection.style.display = 'block';
+            }
+        } else if (tabName === 'European') {
+            // 只显示European Cuisine
+            const europeanSection = Array.from(document.querySelectorAll('.cuisine-section')).find(
+                section => section.querySelector('.cuisine-title').textContent.includes('European')
+            );
+            if (europeanSection) {
+                europeanSection.style.display = 'block';
+            }
+        } else if (tabName === 'Oceania') {
+            // 只显示Oceanian Cuisine
+            const oceanianSection = Array.from(document.querySelectorAll('.cuisine-section')).find(
+                section => section.querySelector('.cuisine-title').textContent.includes('Oceanian')
+            );
+            if (oceanianSection) {
+                oceanianSection.style.display = 'block';
+            }
+        }
+        
+        // 滚动到内容区域顶部
+        const contentArea = document.querySelector('.content-area');
+        contentArea.scrollTop = 0;
+    });
+});
+
+// 为菜谱区域添加鼠标拖拽滚动功能
+document.querySelectorAll('.cuisine-section').forEach(section => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let hasDragged = false;
+
+    section.addEventListener('mousedown', (e) => {
+        // 如果点击的是卡片，不启动拖拽滚动
+        if (e.target.closest('.recipe-card')) {
+            return;
+        }
+        
+        isDown = true;
+        hasDragged = false;
+        section.style.cursor = 'grabbing';
+        startX = e.pageX - section.offsetLeft;
+        scrollLeft = section.scrollLeft;
+    });
+
+    section.addEventListener('mouseleave', () => {
+        isDown = false;
+        section.style.cursor = 'default';
+    });
+
+    section.addEventListener('mouseup', () => {
+        isDown = false;
+        section.style.cursor = 'default';
+        
+        // 短暂延迟后重置标志，防止点击事件触发
+        setTimeout(() => {
+            hasDragged = false;
+        }, 10);
+    });
+
+    section.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        hasDragged = true;
+        const x = e.pageX - section.offsetLeft;
+        const walk = (x - startX) * 2; // 滚动速度倍数
+        section.scrollLeft = scrollLeft - walk;
+    });
+
+    // 阻止拖拽滚动时触发卡片点击
+    section.addEventListener('click', (e) => {
+        if (hasDragged && e.target.closest('.recipe-card')) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+    }, true);
+});
