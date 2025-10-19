@@ -115,23 +115,28 @@
 
 
 /* 拼图网格 */
+/* 3×3 宫格 */
 .puzzle-grid {
-  margin-top: 150px;
-  margin-right: 600px;
+  margin-top: 100px;
+  margin-right:350px;
   display: grid;
-  grid-template-columns: repeat(3, clamp(150px, 12vw, 300px));
-  grid-template-rows: repeat(3, clamp(150px, 12vw, 300px));
+  grid-template-columns: repeat(3, clamp(200px, 12vw, 400px));
+  grid-template-rows: repeat(3, clamp(200px, 12vw, 400px));
   gap: 8px;
 }
 
-/* 即使图片加载不到，也能看到网格轮廓与占位底色 */
+/* 基础（所有格子同一张图，不同位置），先做灰白+轻模糊 */
 .puzzle-piece {
-  background: url('PromotionalMaterial/sushi-bowl.jpg') center/cover no-repeat, #eee;
+  background-image: url("../PromotionalMaterial/sushi-bowl.jpg"); /* ← 路径 */
   background-repeat: no-repeat;
-  background-size: 300% 300%;
+  background-size: 300% 300%;  /* 把整张图切成 3×3 块 */
   filter: grayscale(100%) blur(1px) brightness(0.9);
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  transition: filter 0.35s ease;
 }
 
+/* 各块对应的原图位置（1~9） */
 .puzzle-piece[data-id="1"] { background-position:   0%   0%; }
 .puzzle-piece[data-id="2"] { background-position:  50%   0%; }
 .puzzle-piece[data-id="3"] { background-position: 100%   0%; }
@@ -142,13 +147,9 @@
 .puzzle-piece[data-id="8"] { background-position:  50% 100%; }
 .puzzle-piece[data-id="9"] { background-position: 100% 100%; }
 
-.puzzle-piece.active { filter: none; }
-
-
-/* 激活后切换为彩色图；若图片缺失仍保留底色 */
+/* 完成后只改滤镜（千万别再覆盖 background* 属性） */
 .puzzle-piece.active {
-  background: url('PromotionalMaterial/sushi-bowl.jpg') center/cover no-repeat, #eee;
-  filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0) brightness(1);
   border-color: var(--accent-orange);
   box-shadow: 0 0 0 2px rgba(255,154,86,0.25);
 }
