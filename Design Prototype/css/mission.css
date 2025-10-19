@@ -76,12 +76,12 @@
 /* 右上角小进度条容器 */
 .progress-wrap {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  width: 240px;                 /* 小尺寸 */
+  top: 50px;
+  right: 50px;
+  width: 480px;                 /* 小尺寸 */
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -103,28 +103,51 @@
   white-space: nowrap;
 }
 
+/* 进度条内部填充（缺这个就看不到增长效果） */
+.progress-fill {
+  height: 100%;
+  width: 0%;                      /* 初始为 0 */
+  background: var(--accent-orange);
+  transition: width 0.4s ease-in-out;
+  border-radius: 999px;           /* 和外层圆角保持一致，避免两端方块感 */
+}
+
+
 
 /* 拼图网格 */
 .puzzle-grid {
-  margin-top: 10px;
+  margin-top: 150px;
+  margin-right: 600px;
   display: grid;
-  grid-template-columns: repeat(3, clamp(110px, 12vw, 160px));
-  grid-template-rows: repeat(3, clamp(110px, 12vw, 160px));
+  grid-template-columns: repeat(3, clamp(150px, 12vw, 300px));
+  grid-template-rows: repeat(3, clamp(150px, 12vw, 300px));
   gap: 8px;
 }
 
 /* 即使图片加载不到，也能看到网格轮廓与占位底色 */
 .puzzle-piece {
-  background: url('../img/puzzle-grey.png') center/cover no-repeat, #eee;
-  border-radius: 10px;
-  border: 1px solid var(--gray-light);
-  filter: grayscale(100%) blur(1px);
-  transition: all 0.4s ease;
+  background: url('PromotionalMaterial/sushi-bowl.jpg') center/cover no-repeat, #eee;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  filter: grayscale(100%) blur(1px) brightness(0.9);
 }
+
+.puzzle-piece[data-id="1"] { background-position:   0%   0%; }
+.puzzle-piece[data-id="2"] { background-position:  50%   0%; }
+.puzzle-piece[data-id="3"] { background-position: 100%   0%; }
+.puzzle-piece[data-id="4"] { background-position:   0%  50%; }
+.puzzle-piece[data-id="5"] { background-position:  50%  50%; }
+.puzzle-piece[data-id="6"] { background-position: 100%  50%; }
+.puzzle-piece[data-id="7"] { background-position:   0% 100%; }
+.puzzle-piece[data-id="8"] { background-position:  50% 100%; }
+.puzzle-piece[data-id="9"] { background-position: 100% 100%; }
+
+.puzzle-piece.active { filter: none; }
+
 
 /* 激活后切换为彩色图；若图片缺失仍保留底色 */
 .puzzle-piece.active {
-  background: url('../img/puzzle-color.png') center/cover no-repeat, #eee;
+  background: url('PromotionalMaterial/sushi-bowl.jpg') center/cover no-repeat, #eee;
   filter: grayscale(0) blur(0);
   border-color: var(--accent-orange);
   box-shadow: 0 0 0 2px rgba(255,154,86,0.25);

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const missions = document.querySelectorAll(".mission-item");
   const progressBar = document.getElementById("progress");
+  const progressText = document.getElementById("progressText");
   const pieces = document.querySelectorAll(".puzzle-piece");
   let completed = 0;
 
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const progress = (completed / missions.length) * 100;
         progressBar.style.width = `${progress}%`;
+        progressText.textContent = `${completed}/${missions.length} (${Math.round(progress)}%)`;
       }
     });
   });
@@ -22,19 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     missions.forEach(m => m.classList.remove("completed"));
     pieces.forEach(p => p.classList.remove("active"));
     progressBar.style.width = "0%";
+    progressText.textContent = `0/${missions.length} (0%)`;
   });
 });
-
-// 选择器
-const progressBar  = document.getElementById("progress");
-const progressText = document.getElementById("progressText");
-
-// … 点击任务后：
-const progress = (completed / missions.length) * 100;
-progressBar.style.width = `${progress}%`;
-progressText.textContent = `${completed}/${missions.length} (${Math.round(progress)}%)`;
-
-// … Reset 时：
-completed = 0;
-progressBar.style.width = "0%";
-progressText.textContent = `0/${missions.length} (0%)`;
