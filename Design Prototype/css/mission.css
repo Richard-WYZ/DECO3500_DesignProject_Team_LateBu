@@ -296,3 +296,235 @@
 
 @keyframes pop { from { transform: scale(.97); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 body.modal-open { overflow: hidden; }
+
+/* Celebration Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-backdrop.show { display: flex; }
+
+.modal.celebration {
+  width: 500px;
+  background: #fffaf2;
+  border: 2px solid var(--accent-orange);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 20px;
+  animation: pop 0.25s ease-out;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-header h2 {
+  color: var(--primary-brown);
+  font-family: "Brush Script MT", cursive;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.pan-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.celebration-img {
+  width: 240px;
+  margin: 20px auto;
+  cursor: grab;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.celebration-img:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.celebration-text {
+  font-size: 1rem;
+  color: #4a3b2a;
+}
+
+.celebration-text span {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent-orange);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #e9e1d8;
+  color: var(--primary-brown);
+}
+
+/* 拖拽目标区域 */
+.drop-zone {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background: #f3ece5;
+  border: 2px dashed var(--accent-orange);
+  border-radius: 10px;
+  width: 280px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  color: var(--primary-brown);
+  font-family: 'Brush Script MT', cursive;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes pop {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Celebration Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-backdrop.show { display: flex; }
+
+.modal.celebration {
+  width: 500px;
+  background: #fffaf2;
+  border: 2px solid var(--accent-orange);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 20px;
+  animation: pop 0.25s ease-out;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-header h2 {
+  color: var(--primary-brown);
+  font-family: "Brush Script MT", cursive;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.pan-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.celebration-img {
+  width: 240px;
+  margin: 20px auto;
+  cursor: grab;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.celebration-img:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.celebration-text {
+  font-size: 1rem;
+  color: #4a3b2a;
+}
+
+.celebration-text span {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent-orange);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #e9e1d8;
+  color: var(--primary-brown);
+}
+
+/* 拖拽目标区域 */
+.drop-zone {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background: #f3ece5;
+  border: 2px dashed var(--accent-orange);
+  border-radius: 10px;
+  width: 280px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  color: var(--primary-brown);
+  font-family: 'Brush Script MT', cursive;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes pop {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
