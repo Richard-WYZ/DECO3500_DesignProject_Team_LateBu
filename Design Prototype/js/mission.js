@@ -70,3 +70,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // 首次渲染
   renderProgress();
 });
+
+// 拖拽相关逻辑
+const draggableImage = document.getElementById("draggableImage");
+const dropZone = document.getElementById("printTarget");
+
+if (draggableImage && dropZone) {
+  draggableImage.addEventListener("dragstart", (e) => {
+    e.dataTransfer.setData("text/plain", "illustration");
+    draggableImage.style.opacity = "0.5";
+  });
+
+  draggableImage.addEventListener("dragend", () => {
+    draggableImage.style.opacity = "1";
+  });
+
+  dropZone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZone.style.background = "#fff3e6";
+    dropZone.style.borderColor = "#f28500";
+  });
+
+  dropZone.addEventListener("dragleave", () => {
+    dropZone.style.background = "#f3ece5";
+    dropZone.style.borderColor = "var(--accent-orange)";
+  });
+
+  dropZone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    const data = e.dataTransfer.getData("text/plain");
+    if (data === "illustration") {
+      alert("🖨️ Printing illustration...");
+      dropZone.style.background = "#eaf8ea";
+      dropZone.textContent = "✅ Illustration printed!";
+    }
+  });
+}

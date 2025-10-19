@@ -92,14 +92,30 @@
           </div>
         </div>
 
+        <!-- Complete 弹窗 -->
         <div id="completeModal" class="modal-backdrop" aria-hidden="true">
-          <div class="modal" role="dialog" aria-modal="true" aria-labelledby="completeTitle">
-            <h2 id="completeTitle">🎉 Completed!</h2>
-            <p>All 9 steps for <strong>Salmon Veggie Sushi Bowl</strong> are done.</p>
-            <div class="modal-actions">
-                <button id="modalClose" class="btn btn-primary">Great!</button>
-                <button id="modalReset" class="btn btn-secondary">Reset</button>
+          <div class="modal celebration" role="dialog" aria-modal="true">
+            <div class="modal-header">
+              <h2>🎉 Congratulations!</h2>
             </div>
+
+          <div class="modal-body">
+            <img src="../PromotionalMaterial/celebration.png" alt="Happy Student Illustration" class="celebration-img" id="draggableImage">
+            <p class="celebration-text">
+              Do you want to print illustrations?<br>
+              <span>Drag the illustration to print.</span>
+            </p>
+          </div>
+
+          <div class="modal-actions">
+              <button id="modalClose" class="btn btn-primary">Got it!</button>
+              <button id="modalReset" class="btn btn-secondary">Reset</button>
+          </div>
+        </div>
+
+  <!-- 拖拽目标区域 -->
+        <div id="printTarget" class="drop-zone">
+          <p>🖨️ Drag the tag here to print</p>
           </div>
         </div>
 
