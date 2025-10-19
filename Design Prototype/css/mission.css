@@ -118,7 +118,7 @@
 /* 3×3 宫格 */
 .puzzle-grid {
   margin-top: 100px;
-  margin-right:350px;
+  margin-right:250px;
   display: grid;
   grid-template-columns: repeat(3, clamp(200px, 12vw, 400px));
   grid-template-rows: repeat(3, clamp(200px, 12vw, 400px));
@@ -159,9 +159,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  margin-left: 40px;
-  height: 100%;
+  gap: 28px;
+  margin-left: 0;           /* 不再需要硬 margin */
+  min-width: 140px;         /* 按头像尺寸调整 */
+  height: auto;
 }
 
 /* 单个头像 */
@@ -187,4 +188,64 @@
   gap: 24px; 
 }
 
+/* 右侧区域横排：拼图 | 信息栏 | 头像列 */
+.right-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;                 /* 三列之间的间距 */
+  flex-wrap: nowrap;
+}
 
+/* 信息栏卡片 */
+.info-panel {
+  width: 260px;              /* 你可以按需要改成 240~300 */
+  background: #fff7ef;       /* 奶油底色，贴合你的配色 */
+  border: 2px solid var(--accent-orange);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-light);
+  margin-top: 90px;          /* 与拼图顶部对齐 */
+  top: 110px;
+}
+
+/* 标题用主页同款手写体 */
+.info-title {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.6rem;
+  color: var(--primary-brown);
+  margin: 0 0 8px 0;
+}
+
+/* 食材列表 */
+.ing-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 10px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+/* 自定义圆点 */
+.ing-list .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--accent-orange);
+  vertical-align: middle;
+}
+
+/* 备注 */
+.note {
+  margin-top: 12px;
+  margin-right: 200px;
+  font-size: 0.88rem;
+  color: #825d4d;
+  background: #fff2e5;
+  border-left: 3px solid var(--accent-orange);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
