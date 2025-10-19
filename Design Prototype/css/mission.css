@@ -252,3 +252,47 @@
   padding: 8px 10px;
   border-radius: 8px;
 }
+
+/* ===== Modal ===== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  display: none;                 /* 默认隐藏 */
+  align-items: center;
+  justify-content: center;
+  z-index: 999;                  /* 盖在最上层 */
+}
+
+/* ===== Modal ===== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal-backdrop.show { display: flex; }
+
+.modal {
+  width: min(92vw, 480px);
+  background: #fff7ef;
+  border: 2px solid var(--accent-orange);
+  border-radius: 18px;
+  box-shadow: var(--shadow-light);
+  padding: 22px 22px 18px;
+  text-align: center;
+  animation: pop .24s ease-out;
+}
+.modal h2 { margin: 0 0 8px; color: var(--primary-brown); font-family: 'Brush Script MT', cursive; font-size: 2rem; }
+.modal p { margin: 0 0 16px; color: var(--text-primary); }
+.modal-actions { display: flex; gap: 10px; justify-content: center; }
+
+.btn { padding: 10px 16px; border-radius: 999px; border: none; cursor: pointer; font-weight: 600; }
+.btn-primary   { background: var(--accent-orange); color: #fff; }
+.btn-secondary { background: #e9e1d8; color: var(--primary-brown); }
+
+@keyframes pop { from { transform: scale(.97); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+body.modal-open { overflow: hidden; }
