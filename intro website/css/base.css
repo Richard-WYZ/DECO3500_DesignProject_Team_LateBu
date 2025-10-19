@@ -1,0 +1,72 @@
+/* Base reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", "Segoe UI", "Microsoft YaHei", sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-default);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --bg-default: #f8f4f0;
+    --bg-alt: #fff7ed;
+    --bg-card: #ffffff;
+    --text-primary: #2d2420;
+    --text-secondary: #5a4f49;
+    --accent-primary: #d97b50;
+    --accent-secondary: #f3b27a;
+    --accent-dark: #8b4e3a;
+    --accent-green: #4a7a67;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-strong: rgba(0, 0, 0, 0.12);
+    --shadow-soft: 0 12px 30px rgba(60, 40, 20, 0.08);
+    --shadow-card: 0 15px 40px rgba(90, 78, 58, 0.12);
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+    --transition-default: 0.28s ease;
+    --max-width: 1120px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
