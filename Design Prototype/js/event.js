@@ -1,154 +1,159 @@
-// 全局变量存储当前选中的卡片
-let selectedCard = null;
+// Event Page JavaScript
+
+// 全局变量
 let isDragging = false;
 let dragElement = null;
-let clickTimeout = null;
+let selectedTimeSlot = null;
 
-// 为所有菜品卡片添加点击事件
-document.querySelectorAll('.recipe-card').forEach(card => {
-    card.addEventListener('click', function(e) {
-        const dishId = this.getAttribute('data-dish');
-        
-        // 清除之前的点击计时器
-        if (clickTimeout) {
-            clearTimeout(clickTimeout);
-        }
-        
-        // 移除之前的选中状态
-        if (selectedCard) {
-            selectedCard.classList.remove('selected');
-        }
-        
-        // 移除所有高亮
-        document.querySelectorAll('.time-cell').forEach(cell => {
-            cell.classList.remove('highlight');
-        });
-        
-        // 设置新的选中状态
-        this.classList.add('selected');
-        selectedCard = this;
-        
-        // 高亮对应的特定时间块
-        document.querySelectorAll(`.time-cell[data-dish="${dishId}"]`).forEach(cell => {
-            cell.classList.add('highlight');
-        });
-        
-        // 单击后延迟判断（防止双击时触发）
-        clickTimeout = setTimeout(() => {
-            // 这里的单击逻辑已由时间块的单击处理
-        }, 300);
+// 页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', function() {
+    initializeTimeSlots();
+    initializeDragAndDrop();
+});
+
+// 初始化时间槽
+function initializeTimeSlots() {
+    // 为所有可拖拽的时间槽添加事件
+    document.querySelectorAll('.time-cell.highlight').forEach(cell => {
+        cell.addEventListener('mousedown', handleTimeSlotMouseDown);
     });
     
-    // 双击跳转到event.html
-    card.addEventListener('dblclick', function() {
-        if (clickTimeout) {
-            clearTimeout(clickTimeout);
-        }
-        window.location.href = 'event.html';
+    // 为空时间槽添加点击事件
+    document.querySelectorAll('.time-cell:not(.highlight):not(.public)').forEach(cell => {
+        cell.addEventListener('click', function() {
+            // 清除选中状态
+            if (selectedTimeSlot) {
+                selectedTimeSlot.classList.remove('selected');
+                selectedTimeSlot = null;
+            }
+        });
     });
-});
+}
 
-// 为高亮的时间块添加拖拽和单击功能
-document.addEventListener('mousedown', function(e) {
-    if (e.target.classList.contains('time-cell') && e.target.classList.contains('highlight')) {
-        e.preventDefault();
+// 处理时间槽的鼠标按下事件
+function handleTimeSlotMouseDown(e) {
+    e.preventDefault();
+    
+    const originalCell = e.target.closest('.time-cell');
+    let hasMoved = false;
+    
+    const onMouseMove = function(moveEvent) {
+        moveEvent.preventDefault();
         
-        const originalCell = e.target;
-        let hasMoved = false;
+        if (!hasMoved) {
+            hasMoved = true;
+            isDragging = true;
+            
+            // 创建拖拽元素
+            createDragElement(originalCell);
+            originalCell.style.opacity = '0.3';
+        }
         
-        const onMouseMove = function(moveEvent) {
-            moveEvent.preventDefault();
+        // 更新拖拽元素位置
+        if (dragElement) {
+            dragElement.style.left = (moveEvent.clientX + 10) + 'px';
+            dragElement.style.top = (moveEvent.clientY + 10) + 'px';
             
-            if (!hasMoved) {
-                hasMoved = true;
-                isDragging = true;
-                
-                // 创建拖拽元素
-                dragElement = document.createElement('div');
-                dragElement.id = 'drag-ghost-element';
-                dragElement.style.position = 'fixed';
-                dragElement.style.zIndex = '999999';
-                dragElement.style.backgroundColor = '#ff9a56';
-                dragElement.style.color = 'white';
-                dragElement.style.padding = '20px 30px';
-                dragElement.style.borderRadius = '15px';
-                dragElement.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
-                dragElement.style.fontWeight = 'bold';
-                dragElement.style.fontSize = '1.3em';
-                dragElement.style.pointerEvents = 'none';
-                dragElement.style.transform = 'rotate(-5deg)';
-                
-                // 显示菜品名称
-                if (selectedCard) {
-                    const recipeName = selectedCard.querySelector('.recipe-name').textContent;
-                    dragElement.textContent = recipeName;
-                } else {
-                    dragElement.textContent = 'Recipe Tag';
-                }
-                
-                document.body.appendChild(dragElement);
-                originalCell.style.opacity = '0.3';
-                
-                console.log('拖拽元素已创建，ID:', dragElement.id);
-            }
-            
-            // 更新拖拽元素位置
-            if (dragElement) {
-                dragElement.style.left = (moveEvent.clientX + 10) + 'px';
-                dragElement.style.top = (moveEvent.clientY + 10) + 'px';
-                
-                // 检查是否在instruction区域
-                const instruction = document.querySelector('.instruction');
-                const rect = instruction.getBoundingClientRect();
-                
-                if (moveEvent.clientX >= rect.left && 
-                    moveEvent.clientX <= rect.right &&
-                    moveEvent.clientY >= rect.top && 
-                    moveEvent.clientY <= rect.bottom) {
-                    instruction.classList.add('drag-over');
-                } else {
-                    instruction.classList.remove('drag-over');
-                }
-            }
-        };
-        
-        const onMouseUp = function(upEvent) {
-            document.removeEventListener('mousemove', onMouseMove);
-            document.removeEventListener('mouseup', onMouseUp);
-            
-            originalCell.style.opacity = '';
-            
+            // 检查是否在instruction区域
             const instruction = document.querySelector('.instruction');
-            instruction.classList.remove('drag-over');
+            const rect = instruction.getBoundingClientRect();
             
-            if (hasMoved && dragElement) {
-                console.log('拖拽结束');
-                
-                // 检查是否拖到了instruction区域
-                const rect = instruction.getBoundingClientRect();
-                
-                if (upEvent.clientX >= rect.left && 
-                    upEvent.clientX <= rect.right &&
-                    upEvent.clientY >= rect.top && 
-                    upEvent.clientY <= rect.bottom) {
-                    showSuccessModal();
-                }
-                
-                dragElement.remove();
-                dragElement = null;
-            } else if (!hasMoved) {
-                // 快速点击，跳转到event.html
-                window.location.href = 'event.html';
+            if (moveEvent.clientX >= rect.left && 
+                moveEvent.clientX <= rect.right &&
+                moveEvent.clientY >= rect.top && 
+                moveEvent.clientY <= rect.bottom) {
+                instruction.classList.add('drag-over');
+            } else {
+                instruction.classList.remove('drag-over');
+            }
+        }
+    };
+    
+    const onMouseUp = function(upEvent) {
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+        
+        originalCell.style.opacity = '';
+        
+        const instruction = document.querySelector('.instruction');
+        instruction.classList.remove('drag-over');
+        
+        if (hasMoved && dragElement) {
+            // 检查是否拖到了instruction区域
+            const rect = instruction.getBoundingClientRect();
+            
+            if (upEvent.clientX >= rect.left && 
+                upEvent.clientX <= rect.right &&
+                upEvent.clientY >= rect.top && 
+                upEvent.clientY <= rect.bottom) {
+                showSuccessModal();
             }
             
-            isDragging = false;
-            hasMoved = false;
-        };
+            dragElement.remove();
+            dragElement = null;
+        } else if (!hasMoved) {
+            // 快速点击，可以添加其他逻辑
+            console.log('时间槽被点击');
+        }
         
-        document.addEventListener('mousemove', onMouseMove);
-        document.addEventListener('mouseup', onMouseUp);
+        isDragging = false;
+        hasMoved = false;
+    };
+    
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+}
+
+// 创建拖拽元素
+function createDragElement(originalCell) {
+    dragElement = document.createElement('div');
+    dragElement.id = 'drag-ghost-element';
+    dragElement.style.position = 'fixed';
+    dragElement.style.zIndex = '999999';
+    dragElement.style.backgroundColor = '#ff9a56';
+    dragElement.style.color = 'white';
+    dragElement.style.padding = '20px 30px';
+    dragElement.style.borderRadius = '15px';
+    dragElement.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
+    dragElement.style.fontWeight = 'bold';
+    dragElement.style.fontSize = '1.3em';
+    dragElement.style.pointerEvents = 'none';
+    dragElement.style.transform = 'rotate(-5deg)';
+    
+    // 获取时间槽信息
+    const timeSlot = originalCell.closest('.time-slot');
+    const timeLabel = timeSlot.querySelector('.time-label').textContent;
+    const eventName = originalCell.querySelector('.event-name');
+    
+    if (eventName) {
+        dragElement.textContent = eventName.textContent + ' (' + timeLabel + ')';
+    } else {
+        dragElement.textContent = 'Time Slot: ' + timeLabel;
     }
-});
+    
+    document.body.appendChild(dragElement);
+}
+
+// 初始化拖放功能
+function initializeDragAndDrop() {
+    // 为instruction区域添加拖放事件
+    const instruction = document.querySelector('.instruction');
+    
+    instruction.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        this.classList.add('drag-over');
+    });
+    
+    instruction.addEventListener('dragleave', function(e) {
+        this.classList.remove('drag-over');
+    });
+    
+    instruction.addEventListener('drop', function(e) {
+        e.preventDefault();
+        this.classList.remove('drag-over');
+        showSuccessModal();
+    });
+}
 
 // 显示成功弹窗
 function showSuccessModal() {
@@ -170,6 +175,9 @@ function showSuccessModal() {
     document.body.appendChild(overlay);
     document.body.appendChild(modal);
     
+    // 更新进度条
+    updateProgress();
+    
     const closeBtn = modal.querySelector('.close-btn');
     closeBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', closeModal);
@@ -180,24 +188,30 @@ function showSuccessModal() {
     }
 }
 
-// 为时间块添加点击事件
-document.querySelectorAll('.time-cell').forEach(cell => {
-    cell.addEventListener('click', function(e) {
-        if (isDragging) {
-            return;
-        }
-        
-        if (!this.classList.contains('filled') && !this.classList.contains('public') && !this.classList.contains('highlight')) {
-            document.querySelectorAll('.time-cell').forEach(c => {
-                c.classList.remove('highlight');
-            });
-            if (selectedCard) {
-                selectedCard.classList.remove('selected');
-                selectedCard = null;
-            }
-        }
-    });
-});
+// 更新进度条
+function updateProgress() {
+    const progressFill = document.querySelector('.progress-fill');
+    const progressText = document.querySelector('.progress-text');
+    
+    // 模拟增加参与人数
+    let currentParticipants = 3;
+    let maxParticipants = 5;
+    
+    // 增加一个参与者
+    currentParticipants = Math.min(currentParticipants + 1, maxParticipants);
+    
+    // 更新进度条宽度
+    const percentage = (currentParticipants / maxParticipants) * 100;
+    progressFill.style.width = percentage + '%';
+    
+    // 更新文本
+    const remaining = maxParticipants - currentParticipants;
+    if (remaining > 0) {
+        progressText.textContent = `${currentParticipants} / ${maxParticipants} , only ${remaining} left`;
+    } else {
+        progressText.textContent = `${currentParticipants} / ${maxParticipants} , FULL`;
+    }
+}
 
 // Start Event按钮点击事件
 document.querySelector('.start-btn').addEventListener('click', function() {
@@ -402,7 +416,8 @@ function showTicketScanModal() {
             confirmModal.remove();
             overlay.remove();
             modal.remove();
-            window.location.href = 'mission.html';
+            // 可以添加跳转到下一页的逻辑，或其他操作
+            alert('Proceeding with ' + scannedTickets.length + ' participants');
         });
         
         confirmOverlay.addEventListener('click', function(e) {
@@ -444,112 +459,13 @@ function showTicketScanModal() {
     });
 }
 
-// 标签页切换功能
-document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        // 移除所有标签的active状态
-        document.querySelectorAll('.tab').forEach(t => {
-            t.classList.remove('active');
-        });
-        
-        // 添加当前标签的active状态
-        this.classList.add('active');
-        
-        // 获取点击的标签文本
-        const tabName = this.textContent.trim();
-        
-        // 隐藏所有菜系区域
-        document.querySelectorAll('.cuisine-section').forEach(section => {
-            section.style.display = 'none';
-        });
-        
-        // 显示对应的菜系
-        if (tabName === 'Worldwide') {
-            // 显示所有菜系
-            document.querySelectorAll('.cuisine-section').forEach(section => {
-                section.style.display = 'block';
-            });
-        } else if (tabName === 'Asian') {
-            // 只显示Asian Cuisine
-            const asianSection = Array.from(document.querySelectorAll('.cuisine-section')).find(
-                section => section.querySelector('.cuisine-title').textContent.includes('Asian')
-            );
-            if (asianSection) {
-                asianSection.style.display = 'block';
-            }
-        } else if (tabName === 'European') {
-            // 只显示European Cuisine
-            const europeanSection = Array.from(document.querySelectorAll('.cuisine-section')).find(
-                section => section.querySelector('.cuisine-title').textContent.includes('European')
-            );
-            if (europeanSection) {
-                europeanSection.style.display = 'block';
-            }
-        } else if (tabName === 'Oceania') {
-            // 只显示Oceanian Cuisine
-            const oceanianSection = Array.from(document.querySelectorAll('.cuisine-section')).find(
-                section => section.querySelector('.cuisine-title').textContent.includes('Oceanian')
-            );
-            if (oceanianSection) {
-                oceanianSection.style.display = 'block';
-            }
-        }
-        
-        // 滚动到内容区域顶部
-        const contentArea = document.querySelector('.content-area');
-        contentArea.scrollTop = 0;
-    });
+// 搜索功能
+document.querySelector('.search-bar input').addEventListener('input', function(e) {
+    console.log('搜索内容：', e.target.value);
+    // 这里可以添加搜索逻辑
 });
 
-// 为菜谱区域添加鼠标拖拽滚动功能
-document.querySelectorAll('.cuisine-section').forEach(section => {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let hasDragged = false;
-
-    section.addEventListener('mousedown', (e) => {
-        // 如果点击的是卡片，不启动拖拽滚动
-        if (e.target.closest('.recipe-card')) {
-            return;
-        }
-        
-        isDown = true;
-        hasDragged = false;
-        section.style.cursor = 'grabbing';
-        startX = e.pageX - section.offsetLeft;
-        scrollLeft = section.scrollLeft;
-    });
-
-    section.addEventListener('mouseleave', () => {
-        isDown = false;
-        section.style.cursor = 'default';
-    });
-
-    section.addEventListener('mouseup', () => {
-        isDown = false;
-        section.style.cursor = 'default';
-        
-        // 短暂延迟后重置标志，防止点击事件触发
-        setTimeout(() => {
-            hasDragged = false;
-        }, 10);
-    });
-
-    section.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        hasDragged = true;
-        const x = e.pageX - section.offsetLeft;
-        const walk = (x - startX) * 2; // 滚动速度倍数
-        section.scrollLeft = scrollLeft - walk;
-    });
-
-    // 阻止拖拽滚动时触发卡片点击
-    section.addEventListener('click', (e) => {
-        if (hasDragged && e.target.closest('.recipe-card')) {
-            e.stopPropagation();
-            e.preventDefault();
-        }
-    }, true);
+// 返回按钮点击事件
+document.querySelector('.back-arrow').addEventListener('click', function() {
+    window.location.href = 'index.html';
 });
