@@ -1,3 +1,35 @@
+# NutriMate: Co-cooking for Connection, Culture & Health
+
+NutriMate is a physical–digital co-cooking system that transforms underused dorm kitchens into hubs of social connection and healthy living.
+
+# Challenge
+
+International students in shared housing often feel isolated and avoid the communal kitchen because it’s messy, confusing to book, or don’t knows when it’s available. Yet they still want nutritious meals, new friendships, and cultural exchange.
+
+# Our Vision
+
+NutriMate turns everyday kitchen spaces into a context-aware social journey: from noticing an event in the lobby, to coordinating cooking in the kitchen, to sharing memories afterward. It blends social awareness, coordination, and mutual learning with mobile, context-sensitive tools that travel with students through their daily lives.
+
+# How It Works
+
+- **Interactive Lobby Board** — shows real-time availability and cultural themes; scan to reserve instantly.
+- **Mobile Companion App** — check open spots, find cooking partners, and get reminders on the go.
+- **AI Kitchen Display** — guides small teams step by step, visualizing roles, nutrition tips, and progress.
+- **Souvenir Printer** — prints personalized group illustrations to celebrate shared achievements.
+
+# Social × Mobile Edge
+
+- NutriMate is **social**: it fosters collaboration, coordination, and cultural learning through cooking.
+- It’s **mobile**: connecting physical spaces and digital moments, adapting to each student’s context, whether in the lobby, the kitchen, or on the move.
+
+# Impact
+
+By making cooking visible, guided, and shared, NutriMate helps:
+- Increase communal kitchen usage
+- Reduce loneliness among residents
+- Promote healthier, culturally diverse eating habits
+- Each session becomes a story worth sharing — a digital and physical trace of connection.
+
 | Social                                            | 体现                                                              | 说明                                                                   |
 | ------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | **Awareness（感知）**                       | 实时显示厨房空位与使用状态（Interactive Lobby Board、Mobile App） | 让学生知道“谁在使用厨房”“哪里有空位”，提升情境感知，降低使用门槛。 |
