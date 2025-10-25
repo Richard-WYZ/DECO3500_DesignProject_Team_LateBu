@@ -38,8 +38,7 @@ A complete copy of all Wiki markdown sources is also included in this repository
 | Member B | Interaction Designer | Designed prototype interactions and booking system.             |
 | Member C | Developer            | Implemented ticket generation and QR system prototype.          |
 | Member D | Visual Designer      | Created UI design, AI-generated visuals, and exhibit materials. |
-| Member D | Visual Designer      | Created UI design, AI-generated visuals, and exhibit materials. |
-| Member D | Visual Designer      | Created UI design, AI-generated visuals, and exhibit materials. |
+| Member E | Visual Designer      | Created UI design, AI-generated visuals, and exhibit materials. |
 
 ---
 
