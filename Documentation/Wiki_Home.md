@@ -1,10 +1,15 @@
-# DECO3500_DesignProject_Team_LateBu (Frame 22)
+# NutriMate  
 
-Design projects for DECO3500
+## Project Overview
+
+**Project Title:** *NutriMate – Social Cooking System for Student Kitchens*  
+**Course:** DECO3500 Social & Mobile Computing  
+**Team:** LateBu  
+
+NutriMate is a social design project that aims to transform shared student kitchens into engaging and collaborative environments.  
+It encourages students to cook together, share food culture, and build social connections through a hybrid system that links physical and digital interactions.
 
 ---
-
-# Project State Documentation
 
 ## Target Users
 
@@ -35,7 +40,7 @@ These students often feel isolated in their apartments and seek low barrier oppo
 
 ### 3. Early Interviews and Insights
 
-* **[Interview Analysis](Iteration1/Interview_Analysis.md)**:
+- **[Interview Analysis](Iteration1/Interview_Analysis.md)**:
   - **Food as a social gateway**: cooking together reduces loneliness and builds friendships faster than dining out.
   - **Cultural exchange**: pride in sharing recipes; curiosity in learning others' food traditions.
   - **Peer influence**: demonstrations inspire healthier eating.
@@ -48,7 +53,8 @@ These students often feel isolated in their apartments and seek low barrier oppo
 
 ### 4. Iteration 2: Focus on Student Kitchens
 
-- **[Proposal]()**
+- **[Refined Proposal](Iteration2/Proposal_V2.md)**
+  - ***---------- place holder ----------***
 
 - **[Further Interviews and Observations](Iteration2/Interview_and_Observation_Findings.md)**:
   - **Kitchen as a social blind spot**: rarely used, avoided due to uncertainty and awkwardness.
@@ -63,7 +69,7 @@ These students often feel isolated in their apartments and seek low barrier oppo
 
 ### 5. Prototype Development
 
-* **[Prototype](Iteration2/prototype.md)**:
+- **[Prototype](Iteration2/prototype.md)**:
   Focus on **making kitchens more social, engaging, and accessible**.
   **Core Features:**
   - **Homepage**: weekly events, cuisine categories, ticket based entry
@@ -80,8 +86,23 @@ These students often feel isolated in their apartments and seek low barrier oppo
 
 ### 6. Prototype Evaluation
 
-* **[Evaluation](prototype_evaluation/Prototype_Evaluation.md)**:
+- **[Evaluation](prototype_evaluation/Prototype_Evaluation.md)**:
+- ***---------- place holder ----------***
 
+### 7. Exhibit
+
+- **[Exhibit](prototype_evaluation/Exhibit.md)**:
+- ***---------- place holder ----------***
+
+### 8. Ethical Consideration
+
+- **[Ethical Consideration](ethical_considerations.md)**:
+- ***---------- place holder ----------***
+
+### 9. Future Plan
+
+- **[Future Plan](prototype_evaluation/Future_Plan.md)**:
+- ***---------- place holder ----------***
 
 ## Key Findings from the Process
 
@@ -110,6 +131,7 @@ These students often feel isolated in their apartments and seek low barrier oppo
   - Students are motivated when activities connect directly to their immediate environment (e.g., lobby screens, kitchen-specific prompts).
 
 ## Current Concept: Kitchen Activity Booking & Recipe Sharing System
+
 - **Lobby based Booking Screen** (location aware and context sensitive)
 - **Healthy Recipe Sharing** (upload from phone, linked to kitchen timetable)
 - **AI Health Rating** (nutrition evaluation, 1–5 stars)
@@ -117,6 +139,7 @@ These students often feel isolated in their apartments and seek low barrier oppo
 - **Interactive Ticket System** (drag and print tickets as engagement and proof of participation)
 
 ## State of the Project
+
 - Multiple user groups and motivations identified through iterative interviews.
 - Core concept evolved from **abstract health focused app** to **concrete, social kitchen engagement system**.
 - Documented user needs, pain points, and motivators consistently across iterations.
