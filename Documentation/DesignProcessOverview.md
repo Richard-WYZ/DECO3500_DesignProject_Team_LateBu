@@ -1,12 +1,14 @@
 # NutriMate – Design Process Overview
 
 **Prototype and Materials**
+
 - [Interactive Prototype](https://3500prototye.netlify.app)
 - [Poster](../Documentation/prototype_evaluation/Exhibit/3500_poster.svg)
 - [Prototype Design](../Documentation/Iteration2/prototype.md)
 - [Intro Website](https://3500introwebsite.netlify.app/)
 
 **Documentation**
+
 - Iteration 1
   - [Interview Analysis](../Documentation/Iteration1/Interview_Analysis.md)
   - [Design Proposal](../Documentation/Iteration1/Refine_Proposal.md)
@@ -45,36 +47,47 @@ How might we enable students to form meaningful social connections through share
 
 ## FOUNDATION  
 
-### Motivations, Aims & Outcomes  
+### Motivations, Aims & Outcomes
+
 - **Motivation:** Address loneliness and disuse of shared kitchens.  
 - **Aim:** Use food and cooking as social entry points to encourage belonging.  
-- **Outcome:** A **hybrid digital–physical system** encouraging both planned and spontaneous cooking events.  
+- **Outcome:** A **hybrid digital–physical system** encouraging both planned and spontaneous cooking events.
 
-### Inspiration  
-Starting from [interview](../Documentation/Iteration2/Interview_and_Observation_Findings.md), drawing on social computing precedents and location-based interaction theory, we examined:  
+### Inspiration
+
+Starting from [interview](../Documentation/Iteration2/Interview_and_Observation_Findings.md), drawing on social computing precedents and location-based interaction theory, we examined:
+
 - Food as a **universal social bridge**.  
 - The role of **spatial visibility** (e.g., bulletin boards, displays) in inviting participation.  
 - **Previous examples** such as recipe walls and QR-based event boards.  
 
-### Site  
+### Site
+
 Our chosen site, the **student dorm kitchen**, is semi-public and emotionally charged: familiar, yet socially uncertain.  
-Mapping movement and observation identified **three zones for engagement**:  
-1. **Lobby & Elevator** – discovery of events.  
+Mapping movement and observation identified **three zones for engagement**:
+
+1. **Lobby & Elevator** – discovery of events.
 2. **Kitchen Entry** – decision and scanning.  
 3. **Cooking Area** – participation and bonding.  
 
-### People  
-**Users:** Students in shared accommodations, especially internationals seeking community.  
-**Methods:**  
+### People
+
+**Users:**
+Students in shared accommodations, especially internationals seeking community.
+
+**Methods:**
+
 - Semi-structured [interviews](../Documentation/Iteration2/Interview_and_Observation_Findings.md).  
 - Observations of real kitchen use.  
 - Prototype co-testing sessions in pairs.  
 
 Insights showed that **students valued social cooking over food quality**, but feared judgment or awkwardness.  
 
-### Resources  
+### Resources
+
 The project used low-cost, context-aware resources:  
-- Dorm bulletin boards and displays.  
+
+- Dorm bulletin boards and displays.
 - Printable recipe cards and QR codes.  
 - A browser-based mini-program for ease of access.  
 
@@ -82,14 +95,16 @@ The project used low-cost, context-aware resources:
 
 ## THE EXPERIENCE ITSELF  
 
-### Theme & Narrative  
+### Theme & Narrative
+
 The guiding theme, **“Cook Together, Connect Together,”** reframes meal preparation as cultural storytelling.  
 Users embark on a **four-stage journey**:  
 **Reserve → Scan → Cook → Celebrate**.  
 
 Each step links place, people, and action to sustain participation beyond the meal itself.  
 
-### Nodes (Interaction Points)  
+### Nodes (Interaction Points)
+
 - **Physical:**  
   - *Recipe Wall* – Post hometown dishes and QR links.  
   - *Event Board* – Announce weekly themed cook sessions.  
@@ -98,7 +113,8 @@ Each step links place, people, and action to sustain participation beyond the me
   - *Mini-Program* – View events, register, or find cooking buddies.  
   - *Community Feed* – Share post-event photos and reflections.  
 
-### Trajectory (User Journey)  
+### Trajectory (User Journey)
+
 1. **Discovery:** Notices event posters in the lobby.  
 2. **Engagement:** Scans QR → joins or bookmarks an event.  
 3. **Preparation:** Receives ingredient list and event details.  
@@ -107,13 +123,15 @@ Each step links place, people, and action to sustain participation beyond the me
 
 This cyclical journey encourages **re-entry and sustained engagement**.  
 
-### Tools  
+### Tools
+
 - **Hybrid Interaction:** QR codes linking event posters to digital interfaces.  
 - **AI Integration:** Nutritional analysis and recipe recommendations.  
 - **Design Artifacts:** Posters, kitchen signage, physical souvenirs.  
 - **Methods:** Observations, think-aloud protocols, and follow-up interviews.  
 
-### Public Face  
+### Public Face
+
 NutriMate’s visual identity emphasizes **warmth and inclusivity** through organic shapes and food-inspired colors.  
 At exhibition, a **live kitchen simulation** demonstrated the booking → cooking → souvenir journey, supported by posters and the prototype.  
 
@@ -129,7 +147,8 @@ At exhibition, a **live kitchen simulation** demonstrated the booking → cookin
 **Participants:** 6–8 international students in dorm-like settings.  
 **Method:** Mixed-method formative evaluation with scenario walkthrough, observation, and post-interview.  
 
-### Key Findings  
+### Key Findings
+
 | Finding | Issue | Design Response |
 |:--|:--|:--|
 | Lack of booking feedback | Uncertainty after registration | Add confirmation ticket + cancel option |
@@ -144,7 +163,8 @@ At exhibition, a **live kitchen simulation** demonstrated the booking → cookin
 
 ## [Reflection](../Documentation/prototype_evaluation/Future_Plan.md)  
 
-Applying the **Design for Location framework** helped keep our design contextually grounded:  
+Applying the **Design for Location framework** helped keep our design contextually grounded:
+
 - **Foundation:** revealed the social and environmental barriers to kitchen use.  
 - **Experience:** structured how physical spaces could become **stages for connection**.  
 - **Public Face:** shaped an inclusive visual identity that communicates warmth and accessibility.  
@@ -168,3 +188,9 @@ Through continuous iteration and testing, NutriMate became not only a **social s
 ## Conclusion  
 
 By integrating social computing principles, interactions, and cultural inclusivity, NutriMate turns shared kitchens into living social spaces, encouraging students not just to eat together, but to **belong together**.  
+
+---
+
+## References
+
+1. Loke, L. & Matthews, B. (2020). *Design for Location: Locating Design through Places, Practices and Pedagogies.*
