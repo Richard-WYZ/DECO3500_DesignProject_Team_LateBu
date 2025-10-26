@@ -9,6 +9,8 @@
 NutriMate is a social design project that aims to transform shared student kitchens into engaging and collaborative environments.  
 It encourages students to cook together, share food culture, and build social connections through a hybrid system that links physical and digital interactions.
 
+See also > **[Design Process Overview](DesignProcessOverview.md)**
+
 ---
 
 ## Target Users
