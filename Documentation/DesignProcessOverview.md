@@ -25,6 +25,12 @@
 
 ---
 
+## Concept Poster
+
+![Poster](../Documentation/prototype_evaluation/Exhibit/3500_poster.svg)
+
+---
+
 ## Summary: Problem & Opportunity Space  
 
 **NutriMate** was designed to transform **shared student kitchens** into inclusive, social, and culturally engaging spaces.  
