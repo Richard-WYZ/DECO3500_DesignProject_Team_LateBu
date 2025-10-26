@@ -12,12 +12,6 @@
 
 ---
 
-Quick view of Our concept:
-
-<img src="Documentation/prototype_evaluation/Exhibit/3500_poster.svg" width=600>
-
----
-
 ## 2. Quick Access
 
 | Resource                    | Link / File                                                                        |
