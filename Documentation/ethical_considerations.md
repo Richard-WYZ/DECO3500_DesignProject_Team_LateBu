@@ -63,6 +63,6 @@ NutriMate’s ethical approach goes beyond “doing no harm.” Our goal is to *
 
 ## 7. References
 
-1. Ethics for Designers. (2017, March 4). Ethics for Designers. [https://www.ethicsfordesigners.com/](https://www.ethicsfordesigners.com/)
+1. *Ethics for Designers. (2017, March 4). Ethics for Designers. [https://www.ethicsfordesigners.com/](https://www.ethicsfordesigners.com/)*
 
-2. Loke, L., & Matthews, B. (2020). *Scaffolding of Interaction Design Education Towards Ethical Design Thinking. In Design Thinking in Higher Education: Interdisciplinary Encounters (pp. 165-181). Singapore: Springer Singapore.*
+2. *Loke, L., & Matthews, B. (2020). Scaffolding of Interaction Design Education Towards Ethical Design Thinking. In Design Thinking in Higher Education: Interdisciplinary Encounters (pp. 165-181). Singapore: Springer Singapore.*
