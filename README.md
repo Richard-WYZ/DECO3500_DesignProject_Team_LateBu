@@ -35,13 +35,13 @@ A complete copy of all Wiki markdown sources is also included in this repository
 
 ## 4. Team & Roles
 
-| Member      | Role                                     | Contribution                                                                                                     |
-| ----------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Yinhan Liu  | UX Researcher and Interface Designer     | Leads discovery interviews, synthesises insights, participates in prototype creation and interface design, and contributes to our design poster.        |
-| Yanjie Bu   | Team Leader and Interaction Designer     | Led project planning and research, created low-fidelity, interactive, and paper prototypes, and joined testing. |
-| Yuzhe Wang  | Research Analyst and Evaluation Designer | Plans evaluation cycles, produces the SUS analysis, and translates findings into iteration priorities.           |
-| Hanqi Liu   | Interaction Designer and Project Steward | Orchestrates co-design workshops, documents key decisions, and keeps the concept cohesive across touchpoints.    |
-| Shizhuo Sun | Prototype Developer & Interaction Designer    | Built interactive prototypes, designed interaction models, and developed key features such as the puzzle and cooking missions. |
+| Member | Role | Contribution |
+|:--|:--|:--|
+| **Yinhan Liu** | UX Researcher & Interface Designer | Led discovery interviews, synthesises insights, participated in prototype creation and interface design, and contributed to our design poster.   |
+| **Yanjie Bu** | Team Leader & Interaction Designer | Led project planning and coordination, conducted user research, created low-fidelity, interactive, and paper prototypes, and joined testing. |
+| **Yuzhe Wang** | Research Analyst & Evaluation Designer | Planned evaluation methods, analyzed findings, and guided redesigns. |
+| **Hanqi Liu** | Interaction Designer & Project Steward | Coordinated design documentation and maintained design consistency. |
+| **Shizhuo Sun** | Prototype Developer & Interaction Designer | Built interactive prototypes, designed interaction models, and developed key features such as the puzzle and cooking missions. |
 
 ---
 
