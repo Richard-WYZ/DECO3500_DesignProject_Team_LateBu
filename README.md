@@ -41,7 +41,7 @@ A complete copy of all Wiki markdown sources is also included in this repository
 | Yanjie Bu   | Team Leader and Interaction Designer     | Led project planning and research, created low-fidelity, interactive, and paper prototypes, and joined testing. |
 | Yuzhe Wang  | Research Analyst and Evaluation Designer | plans evaluation cycles, produces the SUS analysis, and translates findings into iteration priorities.           |
 | Hanqi Liu   | Interaction Designer and Project Steward | orchestrates co-design workshops, documents key decisions, and keeps the concept cohesive across touchpoints.    |
-| Shizhuo Sun | Prototype Developer & Interaction Designer    | builds interactive prototypes, designs interaction models, and develops key features such as the puzzle and cooking missions.|
+| Shizhuo Sun | Prototype Developer & Interaction Designer    | built interactive prototypes, designed interaction models, and developed key features such as the puzzle and cooking missions. |
 
 ---
 
