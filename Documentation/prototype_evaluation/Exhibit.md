@@ -52,7 +52,7 @@ This preparation ensured that visitors could explore the idea even before intera
 During the exhibit, the entire team actively participated in:
 
 * **Setting up the prototype display**, combining the prototype screen, printed ticket function, and intro website.
-<img src="Exhibit/image0.jpg" width="600">
+    <img src="Exhibit/image0.jpg" width="600">
 * **Delivering live demonstrations**, showing how users can book, cook, and print souvenirs.
 * **Engaging in discussions** with peers and visitors to explain the design goals and research background.
 * **Answering Q&A sessions** from tutors and other participants, emphasizing the social design and iterative development process.

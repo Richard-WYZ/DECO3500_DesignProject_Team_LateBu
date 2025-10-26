@@ -1,4 +1,4 @@
-# Evaluation Protocol – Social Cooking System Prototype
+# Evaluation of Social Cooking System Prototype
 
 ## 1. Purpose
 
