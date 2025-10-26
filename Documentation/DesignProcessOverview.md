@@ -178,7 +178,7 @@ Through continuous iteration and testing, NutriMate became not only a **social s
 |:--|:--|:--|
 | **Yinhan Liu** | UX Researcher & Interface Designer | Led discovery interviews, synthesises insights, participated in prototype creation and interface design, and contributed to our design poster.   |
 | **Yanjie Bu** | Team Leader & Interaction Designer | Led project planning and coordination, conducted user research, created low-fidelity, interactive, and paper prototypes, and joined testing. |
-| **Yuzhe Wang** | Research Analyst & Evaluation Designer | Planned evaluation methods, analyzed findings, and guided redesigns. |
+| **Yuzhe Wang** | Research Analyst & Interaction Designer | Planned evaluation methods, analyzed findings, and guided redesigns. Contributed to intro website and maintained documentation. |
 | **Hanqi Liu** | Interaction Designer & Project Steward | Coordinated design documentation and maintained design consistency. |
 | **Shizhuo Sun** | Prototype Developer & Interaction Designer | Built interactive prototypes, designed interaction models, and developed key features such as the puzzle and cooking missions. |
 
