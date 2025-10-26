@@ -45,7 +45,7 @@ How might we enable students to form meaningful social connections through share
 - **Outcome:** A **hybrid digital–physical system** encouraging both planned and spontaneous cooking events.  
 
 ### Inspiration  
-Drawing on social computing precedents and location-based interaction theory, we examined:  
+Starting from [interview](../Documentation/Iteration2/Interview_and_Observation_Findings.md), drawing on social computing precedents and location-based interaction theory, we examined:  
 - Food as a **universal social bridge**.  
 - The role of **spatial visibility** (e.g., bulletin boards, displays) in inviting participation.  
 - **Previous examples** such as recipe walls and QR-based event boards.  
@@ -60,7 +60,7 @@ Mapping movement and observation identified **three zones for engagement**:
 ### People  
 **Users:** Students in shared accommodations, especially internationals seeking community.  
 **Methods:**  
-- Semi-structured interviews (n=10).  
+- Semi-structured [interviews](../Documentation/Iteration2/Interview_and_Observation_Findings.md).  
 - Observations of real kitchen use.  
 - Prototype co-testing sessions in pairs.  
 
@@ -116,7 +116,7 @@ At exhibition, a **live kitchen simulation** demonstrated the booking → cookin
 
 ---
 
-## Evaluation with Users  
+## [Evaluation](../Documentation/prototype_evaluation/Prototype_Evaluation.md) with Users  
 
 **Goal:** Understand how NutriMate supports or hinders social interaction.  
 
@@ -136,7 +136,7 @@ At exhibition, a **live kitchen simulation** demonstrated the booking → cookin
 
 ---
 
-## Reflection  
+## [Reflection](../Documentation/prototype_evaluation/Future_Plan.md)  
 
 Applying the **Design for Location framework** helped keep our design contextually grounded:  
 - **Foundation:** revealed the social and environmental barriers to kitchen use.  
