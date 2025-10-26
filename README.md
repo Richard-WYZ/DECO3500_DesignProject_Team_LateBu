@@ -8,7 +8,7 @@
 
 **Team:** 22 - LateBu
 
-**Semester:** 2025 s1– The University of Queensland
+**Semester:** 2025 S2 – The University of Queensland (St Lucia Campus)
 
 ---
 
@@ -16,6 +16,7 @@
 
 | Resource                    | Link / File                                                                        |
 | --------------------------- | ---------------------------------------------------------------------------------- |
+| **Design Process Overview** | [Read Documentation](Documentation/DesignProcessOverview.md)                    |
 | **Intro Website**     | [View Project Website](https://3500introwebsite.netlify.app/)                         |
 | **Prototype Demo**    | [View Interactive Prototype](https://3500prototye.netlify.app)                        |
 | **Exhibit Poster**    | [Download or Watch](Documentation/prototype_evaluation/Exhibit/3500_poster.svg)       |
@@ -50,3 +51,28 @@ A complete copy of all Wiki markdown sources is also included in this repository
 2. Explore the **[Interactive Prototype](https://3500prototye.netlify.app)** to experience the booking and cooking flow.
 3. Review our **[Wiki Page](https://github.com/Richard-WYZ/DECO3500_DesignProject_Team_LateBu/wiki)** to see all the design flow of this project.
 4. The source code of intro website and prototype is in the folder **[intro website](https://github.com/Richard-WYZ/DECO3500_DesignProject_Team_LateBu/tree/main/intro%20website)** and **[Design Prototype](https://github.com/Richard-WYZ/DECO3500_DesignProject_Team_LateBu/tree/main/Design%20Prototype)**. You can fork this repo or download source code and run locally by using live server.
+
+## 6. Category Links
+
+**Prototype and Materials**
+- [Design Process Overview](Documentation/DesignProcessOverview.md)
+- [Interactive Prototype](https://3500prototye.netlify.app)
+- [Poster](Documentation/prototype_evaluation/Exhibit/3500_poster.svg)
+- [Prototype Design](Documentation/Iteration2/prototype.md)
+- [Intro Website](https://3500introwebsite.netlify.app/)
+
+**Documentation**
+- Iteration 1
+  - [Interview Analysis](Documentation/Iteration1/Interview_Analysis.md)
+  - [Design Proposal](Documentation/Iteration1/Refine_Proposal.md)
+  - [Design Proposal Evaluation](Documentation/Iteration1/Design_Proposal_Evaluation.md)
+- Iteration 2
+  - [Interview Analysis](Documentation/Iteration2/Interview_and_Observation_Findings.md)
+  - [User Needs, Pain Points, and Expectations](Documentation/Iteration2/User_Needs_Pain_Point_Expectations.md)
+  - [Design Prososal](Documentation/Iteration2/Proposal_V2.md)
+- Prototype Evaluation
+  - [Exhibit](Documentation/prototype_evaluation/Exhibit.md)
+  - [Prototype Evaluation Summary](Documentation/prototype_evaluation/Prototype_Evaluation.md)
+  - [Future Work](Documentation/prototype_evaluation/Future_Plan.md)
+- Other Materials
+  - [Ethical Considerations](/Documentation/DesignProcessOverview.md)
