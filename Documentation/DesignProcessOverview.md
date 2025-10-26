@@ -22,7 +22,6 @@
   - [Prototype Evaluation Summary](../Documentation/prototype_evaluation/Prototype_Evaluation.md)
   - [Future Work](../Documentation/prototype_evaluation/Future_Plan.md)
 - Other Materials
-  - [Detailed Design Process](Wiki_Home.md)
   - [Ethical Considerations](ethical_considerations.md)  
 
 ---
@@ -193,4 +192,4 @@ By integrating social computing principles, interactions, and cultural inclusivi
 
 ## References
 
-1. Loke, L. & Matthews, B. (2020). *Design for Location: Locating Design through Places, Practices and Pedagogies.*
+1. *Designing for Location Dependence. (n.d.). Designforlocation.org. [http://designforlocation.org/](http://designforlocation.org/)*

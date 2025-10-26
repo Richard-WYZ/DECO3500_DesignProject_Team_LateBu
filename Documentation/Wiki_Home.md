@@ -192,37 +192,17 @@ These students often feel isolated in their apartments and seek low barrier oppo
 ### 8. Ethical Consideration
 
 - **[Ethical Consideration](ethical_considerations.md)**:
-  - **Core Ethical Principle**
-    - The design process is guided by the understanding that technology shapes social contexts and values, not just provides functionality.
-    - The primary goal is to create a system that empowers users and strengthens community, rather than one that constrains them.
-  - **Identified Ethical Risks**
-    - **Privacy & Data**: Potential exposure of user activity (e.g., when and with whom someone is cooking).
-    - **Social Pressure**: Anxiety or fear of rejection that may deter users from joining public cooking sessions.
-    - **Representation & Inclusion**: Risk of overlooking cultural or dietary diversity in recipes or AI-generated content.
-    - **Technological Dependence**: The system might replace natural, spontaneous face-to-face interaction.
-    - **Public Visibility**: Public displays of activities could pressure users through unwanted social exposure.
-  - **Implemented Mitigation Strategies**
-    - **Transparency**: Clear communication about data use; no login required.
-    - **Informed Consent**: Obtained for all research, with the option to withdraw at any time.
-    - **Privacy Design**: No storage of identifiable data; all participation is anonymous and local.
-    - **Inclusivity**: Designing events and materials to represent diverse cultures and food traditions.
-    - **Empowerment**: User control over participation (voluntary scanning, sharing).
-    - **Reflection**: The team held reflective sessions after each design iteration.
-  - **Framework Application (Loke & Matthews)**
-    - **Responsibility**: Continuous reflection on the system's impact on social behavior and community inclusion.
-    - **Accountability**: Documentation of ethical decisions and justifications in the project wiki.
-    - **Transparency**: Users are informed about how their information is generated and used.
-    - **Inclusivity**: Interfaces and activities designed to be accessible to all students.
-    - **Reflexivity**: The team acknowledges its own biases and revisits assumptions through feedback.
-  - **Future Ethical Considerations**
-    - **Data Ownership**: Grant users the ability to delete or export their data if accounts are introduced.
-    - **Social Dynamics**: Ongoing observation of the system's effect on inclusivity and peer relationships.
-    - **AI Illustration Bias**: Regular evaluation of AI-generated content to prevent cultural stereotypes.
-    - **Public Exposure**: Reassess how event visibility impacts user comfort and autonomy.
-    - **Sustainability**: Ensure all components align with environmentally responsible practices.
-  - **Summary**
-    - The ethical approach aims to go beyond "doing no harm" to actively empower users and build community.
-    - By applying established frameworks, the team maintains a reflective process that prioritizes transparency, inclusivity, and respect for user privacy and autonomy.
+  Throughout the design and evaluation of **NutriMate**, we applied ethical reflection following *Loke & Matthews (2020)* and the Ethical Disclaimer Canvas framework.  
+Our goal was to ensure that the system promoted inclusivity, transparency, and user autonomy within shared student kitchen environments.
+
+- **Key ethical issues identified include:**
+
+  - **Privacy and Consent** — Users book anonymously, raising potential concerns about traceability and data use. We ensured that no personal data is stored and that QR codes only link to session-specific information.  
+  - **Social Pressure and Inclusion** — Cooking together may unintentionally exclude less confident participants. To mitigate this, the interface encourages flexible participation and equal visibility of all users.  
+  - **Responsibility and Transparency** — We reflected on our role as designers to communicate system limitations clearly, avoiding unrealistic expectations about social impact.  
+
+As part of ongoing reflection, we also considered future risks related to data management, AI-generated visuals, and the sustainability of digital infrastructure.  
+This ethical awareness guided our design choices, ensuring that NutriMate fosters social connection responsibly rather than reinforcing exclusion or surveillance.
 
 ### 9. Future Plan
 
