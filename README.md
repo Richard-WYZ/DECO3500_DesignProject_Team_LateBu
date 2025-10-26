@@ -41,7 +41,7 @@ A complete copy of all Wiki markdown sources is also included in this repository
 | Yanjie Bu   | Service and Visual Designer              | maps the end-to-end journey, defines healthy food criteria, and crafts the visual language for cooking missions. |
 | Yuzhe Wang  | Research Analyst and Evaluation Designer | plans evaluation cycles, produces the SUS analysis, and translates findings into iteration priorities.           |
 | Hanqi Liu   | Interaction Designer and Project Steward | orchestrates co-design workshops, documents key decisions, and keeps the concept cohesive across touchpoints.    |
-| Shizhuo Sun | Prototype Developer and UX Researcher    | builds interactive demos, runs usability testing, and drives continuous improvements.                            |
+| Shizhuo Sun | Prototype Developer & Interaction Designer    | builds interactive prototypes, designs interaction models, and develops key features such as the puzzle and cooking missions.|
 
 ---
 
