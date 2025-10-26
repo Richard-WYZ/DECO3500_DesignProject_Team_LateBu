@@ -12,12 +12,12 @@
 
 ## 2. Quick Access
 
-| Resource                   | Link / File                     |
-| -------------------------- | ------------------------------- |
-| **Intro Website**          | [View Project Website](https://3500introwebsite.netlify.app/)       |
-| **Prototype Demo**         | [View Interactive Prototype](https://3500prototye.netlify.app) |
-| **Exhibit Poster** | [Download or Watch](Documentation/prototype_evaluation/Exhibit/3500_poster.svg)          |
-| **GitHub Repository**      | [Visit Repository](https://github.com/Richard-WYZ/DECO3500_DesignProject_Team_LateBu)           |
+| Resource                    | Link / File                                                                        |
+| --------------------------- | ---------------------------------------------------------------------------------- |
+| **Intro Website**     | [View Project Website](https://3500introwebsite.netlify.app/)                         |
+| **Prototype Demo**    | [View Interactive Prototype](https://3500prototye.netlify.app)                        |
+| **Exhibit Poster**    | [Download or Watch](Documentation/prototype_evaluation/Exhibit/3500_poster.svg)       |
+| **GitHub Repository** | [Visit Repository](https://github.com/Richard-WYZ/DECO3500_DesignProject_Team_LateBu) |
 
 ---
 
@@ -32,13 +32,13 @@ A complete copy of all Wiki markdown sources is also included in this repository
 
 ## 4. Team & Roles
 
-| Member   | Role                 | Contribution                                                    |
-| -------- | -------------------- | --------------------------------------------------------------- |
-| Member A | UX Researcher        | Conducted interviews and synthesized user insights.             |
-| Member B | Interaction Designer | Designed prototype interactions and booking system.             |
-| Member C | Developer            | Implemented ticket generation and QR system prototype.          |
-| Member D | Visual Designer      | Created UI design, AI-generated visuals, and exhibit materials. |
-| Member E | Visual Designer      | Created UI design, AI-generated visuals, and exhibit materials. |
+| Member      | Role                                     | Contribution                                                                                                     |
+| ----------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Yinhan Liu  | UX Researcher and Interface Designer     | leads discovery interviews, synthesises insights, and shapes the reservation interface in our prototypes.        |
+| Yanjie Bu   | Service and Visual Designer              | maps the end-to-end journey, defines healthy food criteria, and crafts the visual language for cooking missions. |
+| Yuzhe Wang  | Research Analyst and Evaluation Designer | plans evaluation cycles, produces the SUS analysis, and translates findings into iteration priorities.           |
+| Hanqi Liu   | Interaction Designer and Project Steward | orchestrates co-design workshops, documents key decisions, and keeps the concept cohesive across touchpoints.    |
+| Shizhuo Sun | Prototype Developer and UX Researcher    | builds interactive demos, runs usability testing, and drives continuous improvements.                            |
 
 ---
 
